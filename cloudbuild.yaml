@@ -1,7 +1,7 @@
- steps:
+steps:
  # Build the container image
  - name: 'gcr.io/cloud-builders/docker'
-  args: [ 'build', '-t', 'us-central1-docker.pkg.dev/ailab-377802/medgraph/expense-predict', '.' ]
+   args: [ 'build', '-t', 'us-central1-docker.pkg.dev/ailab-377802/medgraph/expense-predict', '.' ]
  # Push the container image to Container Registry
  - name: 'gcr.io/cloud-builders/docker'
    args: ['push', 'us-central1-docker.pkg.dev/ailab-377802/medgraph/expense-predict:$COMMIT_SHA']
@@ -16,5 +16,5 @@
    - 'us-central1-docker.pkg.dev/ailab-377802/medgraph/expense-predict:$COMMIT_SHA'
    - '--region'
    - 'us-central1'
- images:
+images:
  - 'us-central1-docker.pkg.dev/ailab-377802/medgraph/expense-predict'
