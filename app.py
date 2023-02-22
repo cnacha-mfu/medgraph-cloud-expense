@@ -56,5 +56,5 @@ def predict():
     return flask.jsonify({"predictions": {"results":prediction.tolist(),"explainations":explaination}})
 
 if __name__ == '__main__':
-    ()app.run(host='0.0.0.0', port=port)
+    app.run(host='0.0.0.0', port=port)
 
