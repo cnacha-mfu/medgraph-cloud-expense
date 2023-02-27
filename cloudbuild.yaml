@@ -1,7 +1,7 @@
 steps:
  # Run training job
  - name: 'gcr.io/cloud-builders/docker'
-   args: ['run', 'us-central1-docker.pkg.dev/ailab-377802/medgraph/expense-train']
+   args: ['run', 'us-central1-docker.pkg.dev/ailab-377802/medgraph/expense-train:latest']
  # Build the container image
  - name: 'gcr.io/cloud-builders/docker'
    args: [ 'build', '-t', 'us-central1-docker.pkg.dev/ailab-377802/medgraph/expense-predict:$COMMIT_SHA', '.' ]
