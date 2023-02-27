@@ -2,4 +2,4 @@
 
 For trigger rebuild on cloud
 
-test push
+test push12
